@@ -38,3 +38,8 @@ document.getElementById('triangle_card').addEventListener('mouseover', function(
 document.getElementById('rectangle_card').addEventListener('mouseover', function() {
     setBgColor('rectangle_card');
 });
+
+// 3. parallelogram_card
+document.getElementById('parallelogram_card').addEventListener('mouseover', function() {
+    setBgColor('parallelogram_card');
+});

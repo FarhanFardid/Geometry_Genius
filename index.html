@@ -32,12 +32,13 @@
     <section>
         <!-- main section starts -->
          <main>
-              <div class="container">
-                <div class="grid lg:grid-cols-4 sm:grid-cols-1  ">
-                    
-                        <div id="triangle_card" class=" bg-white border border-gray-200 rounded-lg sm:p-1 m-2 lg:p-2  ">
-                                 <div>
-                                <img class="rounded-t-lg lg:p-3 sm:p-1 mx-auto m-2 lg:w-full lg:object-cover h-auto sm:mt-2" src="images/triangle.png" alt="triangle">
+              <div class="container  m-3  mx-auto ">
+               
+                <div class="grid lg:grid-cols-4 sm:grid-cols-1 gap-2 ">
+                    <!-- Triangle -->
+                        <div id="triangle_card" class=" bg-white border border-gray-200 rounded-lg p-4 ">
+                                 <div >
+                                <img class="rounded-t-lg  mx-auto   lg:w-full lg:object-cover h-auto  " src="images/triangle.png" alt="triangle">
                             </div>
                                  <div class="p-1 m-2 text-center">
                                
@@ -46,8 +47,8 @@
                                 <p class="mb-2  text-gray-700  ">
                                     Area(A) = 0.5 x b x h 
                                 </p>
-                                <input id="triangle-base" type="text" class="w-10 " placeholder="  b">cm
-                                <input id="triangle-height" type="text" class="w-10 "  placeholder="  h">cm
+                                <input id="triangle-base" type="text" class="w-10 " placeholder="  b"> cm
+                                <input id="triangle-height" type="text" class="w-10 "  placeholder="  h"> cm
                             </div>
 
                                 <button id="triangle" class="block  mb-5 px-10 mx-auto   py-2 text-normal font-semibold text-center text-white bg-stone-500 rounded-lg hover:bg-blue-800 ">
@@ -56,10 +57,10 @@
                                 </button>
                             
                         </div>
-                        
-                        <div id="rectangle_card" class=" bg-white border border-gray-200 rounded-lg sm:p-1 m-2 lg:p-2  ">
+                        <!-- rectangle -->
+                        <div id="rectangle_card" class=" bg-white border border-gray-200 rounded-lg p-4 ">
                             <div>
-                            <img class="rounded-t-lg lg:p-3 sm:p-1 mx-auto m-2 lg:w-full lg:object-cover h-auto mt-9" src="images/rectangle.png" alt="rectangle">
+                            <img class="rounded-t-lg  mx-auto  lg:w-full lg:object-cover h-auto mt-9" src="images/rectangle.png" alt="rectangle">
                         </div>
                              <div class="p-1 m-2 text-center">
                            
@@ -68,8 +69,8 @@
                             <p class="mb-2  text-gray-700  ">
                                 Area(A) =  w x l 
                             </p>
-                            <input id="rectangle-base" type="text" class="w-10 " placeholder="  w">cm
-                            <input id="rectangle-height" type="text" class="w-10 "  placeholder="  l">cm
+                            <input id="rectangle-width" type="text" class="w-10 " placeholder="  w"> cm
+                            <input id="rectangle-length" type="text" class="w-10 "  placeholder="  l"> cm
                         </div>
 
                             <button id="rectangle" class="block  mb-5 px-10 mx-auto   py-2 text-normal font-semibold text-center text-white bg-stone-500 rounded-lg hover:bg-blue-800 ">
@@ -78,12 +79,87 @@
                             </button>
                         
                     </div>
-                    <div></div>
-                    </div>
-                
-                <div>
 
+                    <!-- parallelogram -->
+                    <div id="parallelogram_card" class=" bg-white border border-gray-200 rounded-lg  p-4 ">
+                        <div>
+                        <img class="rounded-t-lg mx-auto  lg:w-full lg:object-cover h-auto mt-10 " src="images/parallelogram.png" alt="parallelogram">
+                    </div>
+                         <div class="p-1 m-2 text-center mt-4">
+                       
+                            <h5 class="mb-2 text-2xl font-bold text-gray-900 ">Parallelogram</h5>
+                     
+                        <p class="mb-2  text-gray-700  ">
+                            Area(A) =  b x h 
+                        </p>
+                        <input id="parallelogram-base" type="text" class="w-20 " value ="  b=10cm,"> 
+                        <input id="parallelogram-height" type="text" class="w-20 "  value ="h=12cm"> 
+                    </div>
+
+                        <button id="parallelogram" class="block  mb-5 px-10 mx-auto   py-2 text-normal font-semibold text-center text-white bg-stone-500 rounded-lg hover:bg-blue-800 ">
+                            Calculate
+                          
+                        </button>
+                    
                 </div>
+                <!-- area calculation -->
+                <div class="container p-3 m-2 " >
+                    <h2 class="text-normal font-semibold text-center p-3 underline underline-offset-auto">Area Calculation</h2>
+                    <div id="show_area">
+                     <ol id="list_order"class="list-decimal">
+                        
+                     </ol>
+                    </div>
+                </div> 
+                  <!--Rhombus  -->
+                <div id="rhombus_card" class=" bg-white border border-gray-200 rounded-lg  p-4 ">
+                    <div>
+                    <img class="rounded-t-lg mx-auto  lg:w-full lg:object-cover h-auto " src="images/rhombus.png" alt="rhombus">
+                </div>
+                     <div class="p-1 m-2 text-center mt-4">
+                   
+                        <h5 class="mb-2 text-2xl font-bold text-gray-900 ">Rhombus</h5>
+                 
+                    <p class="mb-2  text-gray-700  ">
+                        Area(A) =  0.5 x d1 x d2 
+                    </p>
+                    <input id="rhombus-side1" type="text" class="w-20 " value ="  d1=16cm,"> 
+                    <input id="rhombus-side2" type="text" class="w-20 "  value ="d2=8cm"> 
+                </div>
+
+                    <button id="rhombus" class="block  mb-5 px-10 mx-auto   py-2 text-normal font-semibold text-center text-white bg-stone-500 rounded-lg hover:bg-blue-800 ">
+                        Calculate
+                      
+                    </button>
+                
+            </div>
+
+            <!-- pentagon -->
+
+            <div id="pentagon_card" class=" bg-white border border-gray-200 rounded-lg  p-4 ">
+                <div>
+                <img class="rounded-t-lg mx-auto  lg:w-full lg:object-cover h-auto p-4 " src="images/pentagon.png" alt="pentagon">
+            </div>
+                 <div class="p-1 m-2 text-center mt-4">
+               
+                    <h5 class="mb-2 text-2xl font-bold text-gray-900 ">Pentagon</h5>
+             
+                <p class="mb-2  text-gray-700  ">
+                    Area(A) =  0.5 x p x b 
+                </p>
+                <input id="pentagon-side1" type="text" class="w-20 " value ="  p=6cm,"> 
+                <input id="pentagon-side2" type="text" class="w-20 " value ="b=10cm"> 
+            </div>
+
+                <button id="pentagon" class="block  mb-5 px-10 mx-auto   py-2 text-normal font-semibold text-center text-white bg-stone-500 rounded-lg hover:bg-blue-800 ">
+                    Calculate
+                  
+                </button>
+            
+        </div>
+            </div>
+                
+                  
               </div>
          </main>
          <!-- main ends -->
