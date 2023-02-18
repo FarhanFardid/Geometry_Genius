@@ -76,26 +76,32 @@ function areaEllipse(val1,val2){
     const area = (3.14 * val1 * val2).toFixed(2);
     return area;
 }
-
+// result show in the area calculation part
 function showArea(name, area){
     const showArea =document.getElementById('list_order');
     const li = document.createElement('li');
     let sup_val = "2";
     let sup = sup_val.sup();
    
-    const btn= document.createElement('button');
- 
- 
-    btn.innerHTML = "Convert to m "+ sup ;
-    
-        li.appendChild(btn);
-        console.log(btn);
           const shape = name + '';
           const result = area + '';
     li.innerHTML =  shape +' '+ result +' '+ "cm"+ sup ; 
-    
+    li.style.paddingLeft="5px";
+    li.style.margin = "2px";
     showArea.appendChild(li);
+
+    const btn= document.createElement('button');
+    btn.innerHTML = "Convert to m"+sup ;
+    btn.style.border ="1px";
+    btn.style.background="blue";
+    btn.style.color ="white";
+    btn.style.padding="3px";
+    btn.style.borderRadius = "3px";
+    btn.style.margin="0 35px";
+    showArea.appendChild(btn);
+   
 }
+
 // triangle area with input validation
 document.getElementById('triangle').addEventListener('click', function(){
     const base = document.getElementById('triangle-base');
@@ -107,18 +113,23 @@ document.getElementById('triangle').addEventListener('click', function(){
 
     if((typeof (baseNum) !== 'number' || typeof (heightNum) !== 'number') || (baseNum < 0 || heightNum< 0) || (base.value.length == '0' || height.value.length == '0') ) {
 
-        alert ("Please, Enter a valid positive number input type for all the input");
-        
+        alert ("Please, Enter a valid positive  number input type for all the input");
+        document.getElementById('triangle-base').value ='';
+        document.getElementById('triangle-height').value ='';
     }
   
     else if((!/^[0-9]+$/.test(baseNum)) || (!/^[0-9]+$/.test(heightNum)))
     {
         alert("Please, Enter Numbers only");
+        document.getElementById('triangle-base').value ='';
+        document.getElementById('triangle-height').value ='';
     }
     else{
         const triArea = areaTriRomPen(baseNum, heightNum);
         showArea('Triangle', triArea);
-        console.log(triArea) ;
+        document.getElementById('triangle-base').value ='';
+        document.getElementById('triangle-height').value ='';
+       
        
     }
 });
@@ -133,20 +144,24 @@ document.getElementById('rectangle').addEventListener('click', function(){
    
     
 
-    if((typeof (widthNum) !== 'number' || typeof (lengthNum) !== 'number') || (widthNum < 0 || lengthNum < 0) || (width.value.length == '0' || length.value.length == '0') ) {
+    if((typeof (widthNum) !== 'number' || typeof (lengthNum) !== 'number') || (widthNum <0 || lengthNum < 0) || (width.value.length == '0' || length.value.length == '0') ) {
 
         alert ("Please, Enter a valid positive number input type for all the input");
-        
+        document.getElementById('rectangle-width').value = '';
+        document.getElementById('rectangle-length').value ='';
     }
   
     else if((!/^[0-9]+$/.test(widthNum)) || (!/^[0-9]+$/.test(lengthNum)))
     {
         alert("Please, Enter Numbers only");
+        document.getElementById('rectangle-width').value = '';
+        document.getElementById('rectangle-length').value ='';
     }
     else{
         const rectArea = areaRectPara(widthNum, lengthNum);
         showArea('Rectangle', rectArea);
-        console.log(rectArea) ;
+        document.getElementById('rectangle-width').value = '';
+        document.getElementById('rectangle-length').value ='';
        
     }
 });
@@ -155,26 +170,26 @@ document.getElementById('rectangle').addEventListener('click', function(){
 document.getElementById('parallelogram').addEventListener('click', function(){
     const parallelArea = areaRectPara(10, 12);
     showArea('Parallelogram', parallelArea);
-    console.log(parallelArea);
+   
 });
 
 // rhombus area
 document.getElementById('rhombus').addEventListener('click', function(){
     const rhombusArea = areaTriRomPen(16, 8);
     showArea('Rhombus', rhombusArea);
-    console.log(rhombusArea);
+    
 });
 
 // pentagon area
 document.getElementById('pentagon').addEventListener('click', function(){
     const pentagonArea = areaTriRomPen(6,10);
     showArea('Pentagon', pentagonArea);
-    console.log(pentagonArea);
+    
 });
 // ellipse area
 
 document.getElementById('ellipse').addEventListener('click', function(){
     const ellipseArea = areaEllipse(10,4);
     showArea('Ellipse', ellipseArea);
-    console.log(ellipseArea);
+    
 });
