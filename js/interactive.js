@@ -77,15 +77,23 @@ function areaEllipse(val1,val2){
 }
 
 function showArea(name, area){
-    const result =document.getElementById('list_order');
+    const showArea =document.getElementById('list_order');
     const li = document.createElement('li');
-          console.log("inside show area") ;
-            
-          const geo = name + '';
-          const res = area + ''
-    li.innerHTML =  geo +' '+ res +' '+ "(cm)";  
+    let sup_val = "2";
+    let sup = sup_val.sup();
+   
+    const btn= document.createElement('button');
+ 
+ 
+    btn.innerHTML = "Convert to m "+ sup ;
     
-    result.appendChild(li);
+        li.appendChild(btn);
+        console.log(btn);
+          const shape = name + '';
+          const result = area + '';
+    li.innerHTML =  shape +' '+ result +' '+ "cm"+ sup ; 
+    
+    showArea.appendChild(li);
 }
 // triangle area with input validation
 document.getElementById('triangle').addEventListener('click', function(){
