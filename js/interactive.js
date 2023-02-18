@@ -30,34 +30,34 @@ function setBgColor(id){
 }
 // card wise color set
 // 1. Triangle card
-document.getElementById('triangle_card').addEventListener('mouseover', function() {
+document.getElementById('triangle_card').addEventListener('mouseenter', function() {
     setBgColor('triangle_card');
 });
 
 
 // 2. Rectangle_card
-document.getElementById('rectangle_card').addEventListener('mouseover', function() {
+document.getElementById('rectangle_card').addEventListener('mouseenter', function() {
     setBgColor('rectangle_card');
 });
 
 // 3. parallelogram_card
-document.getElementById('parallelogram_card').addEventListener('mouseover', function() {
+document.getElementById('parallelogram_card').addEventListener('mouseenter', function() {
     setBgColor('parallelogram_card');
 });
 
 // 4. Rhombus_card
-document.getElementById('rhombus_card').addEventListener('mouseover', function() {
+document.getElementById('rhombus_card').addEventListener('mouseenter', function() {
     setBgColor('rhombus_card');
 });
 
 // 5. pentagon_card
 
-document.getElementById('pentagon_card').addEventListener('mouseover', function() {
+document.getElementById('pentagon_card').addEventListener('mouseenter', function() {
     setBgColor('pentagon_card');
 });
 
 // 6. ellipse_card
-document.getElementById('ellipse_card').addEventListener('mouseover', function() {
+document.getElementById('ellipse_card').addEventListener('mouseenter', function() {
     setBgColor('ellipse_card');
 });
 
