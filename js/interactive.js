@@ -24,8 +24,8 @@ function randColor() {
 function setBgColor(id){
     const clr  = randColor();
     
-    document.getElementById(id).style.background = clr + '';
-    console.log(clr);
+    document.getElementById(id).style.background = clr ;
+    
 }
 // card wise color set
 // 1. Triangle card
@@ -42,4 +42,20 @@ document.getElementById('rectangle_card').addEventListener('mouseover', function
 // 3. parallelogram_card
 document.getElementById('parallelogram_card').addEventListener('mouseover', function() {
     setBgColor('parallelogram_card');
+});
+
+// 4. Rhombus_card
+document.getElementById('rhombus_card').addEventListener('mouseover', function() {
+    setBgColor('rhombus_card');
+});
+
+// 5. pentagon_card
+
+document.getElementById('pentagon_card').addEventListener('mouseover', function() {
+    setBgColor('pentagon_card');
+});
+
+// 6. ellipse_card
+document.getElementById('ellipse_card').addEventListener('mouseover', function() {
+    setBgColor('ellipse_card');
 });
